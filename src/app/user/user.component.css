@@ -1,0 +1,114 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* User container */
+.user-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Profile header styling */
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #6200ea;
+  margin-bottom: 15px;
+}
+
+.username {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.user-email {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Profile details styling */
+.profile-details {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  margin-bottom: 15px;
+}
+
+.detail-label {
+  font-weight: bold;
+  color: #333;
+}
+
+.detail-value {
+  color: #555;
+  margin-left: 10px;
+}
+
+/* Profile actions styling */
+.profile-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-profile {
+  background-color: #6200ea;
+  color: white;
+}
+
+.logout {
+  background-color: #ff4444;
+  color: white;
+}
+
+.action-button:hover {
+  opacity: 0.9;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  .user-container {
+    padding: 20px;
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+  }
+
+  .username {
+    font-size: 20px;
+  }
+
+  .user-email {
+    font-size: 12px;

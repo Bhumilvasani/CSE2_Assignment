@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Component</title>
+  <link rel="stylesheet" href="app.component.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#login" class="nav-link">Login</a></li>
+        <li><a href="#register" class="nav-link">Register</a></li>
+        <li><a href="#forgot-password" class="nav-link">Forgot Password</a></li>
+        <li><a href="#user" class="nav-link">User Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Content Area -->
+  <main>
+    <!-- Login Component -->
+    <div id="login" class="component">
+      <h2>Login</h2>
+      <form class="login-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="action-button">Login</button>
+      </form>
+    </div>
+
+    <!-- Register Component -->
+    <div id="register" class="component">
+      <h2>Register</h2>
+      <form class="register-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+        </div>
+        <button type="submit" class="action-button">Register</button>
+      </form>
+    </div>
+
+    <!-- Forgot Password Component -->
+    <div id="forgot-password" class="component">
+      <h2>Forgot Password</h2>
+      <form class="forgot-password-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="action-button">Reset Password</button>
+      </form>
+    </div>
+
+    <!-- User Component -->
+    <div id="user" class="component">
+      <h2>User Profile</h2>
+      <div class="profile-details">
+        <div class="detail-item">
+          <span class="detail-label">Name:</span>
+          <span class="detail-value">John Doe</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Email:</span>
+          <span class="detail-value">johndoe&#64;example.com</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Location:</span>
+          <span class="detail-value">New York, USA</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- JavaScript to Highlight Active Navigation Link -->
+  <script>
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Add click event listener to each link
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Remove 'active' class from all links
+        navLinks.forEach(link => link.classList.remove('active'));
+        // Add 'active' class to the clicked link
+        link.classList.add('active');
+      });
+    });
+
+    // Highlight the active link based on the URL hash on page load
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const activeLink = document.querySelector(`.nav-link[href="${hash}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

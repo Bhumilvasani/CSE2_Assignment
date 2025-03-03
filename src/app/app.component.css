@@ -1,0 +1,146 @@
+/* General body styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-image: url('https://cdn.vectorstock.com/i/500p/37/60/artificial-intelligence-background-ai-neural-vector-28033760.jpg'); /* Add your background image */
+  background-size: cover; /* Ensure the image covers the entire page */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-attachment: fixed; /* Fix the background while scrolling */
+  min-height: 100vh; /* Ensure the body covers the full viewport height */
+}
+
+/* Header and navigation bar styling */
+header {
+  background-color: rgba(98, 0, 234, 0.8); /* Semi-transparent background */
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #3700b3;
+  color: #ffffff;
+}
+
+/* Active navigation link */
+.nav-link.active {
+  background-color: #3700b3;
+  color: #ffffff;
+}
+
+/* Main content area styling */
+main {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end; /* Align components to the right */
+}
+
+.component {
+  display: none; /* Hide all components by default */
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.component h2 {
+  color: #6200ea;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #6200ea;
+}
+
+.action-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+  background-color: #3700b3;
+}
+
+/* Show the active component based on the URL hash */
+#login:target,
+#register:target,
+#forgot-password:target,
+#user:target {
+  display: block;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}

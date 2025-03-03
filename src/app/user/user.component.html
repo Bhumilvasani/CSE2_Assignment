@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="user.component.css">
+</head>
+<body>
+  <div class="user-container">
+    <div class="user-profile">
+      <div class="profile-header">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-picture">
+        <h2 class="username">John Doe</h2>
+        <p class="user-email">johndoe&#64;example.com</p> <!-- Escaped @ symbol -->
+      </div>
+      <div class="profile-details">
+        <div class="detail-item">
+          <span class="detail-label">Location:</span>
+          <span class="detail-value">New York, USA</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Joined:</span>
+          <span class="detail-value">January 2021</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Bio:</span>
+          <span class="detail-value">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel purus at sapien tincidunt tincidunt.</span>
+        </div>
+      </div>
+      <div class="profile-actions">
+        <button class="action-button edit-profile">Edit Profile</button>
+        <button class="action-button logout">Logout</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
